@@ -70,4 +70,3 @@ foundationModel: 'apac.amazon.nova-pro-v1:0'     // Production model
 Simply update the `foundationModel` field in your environment config files:
 - `environments/dev.ts`
 - `environments/staging.ts` 
-- `environments/prod.ts`
