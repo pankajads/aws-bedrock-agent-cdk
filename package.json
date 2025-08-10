@@ -1,0 +1,45 @@
+{
+  "name": "bedrock-agent-cdk",
+  "version": "1.0.0",
+  "description": "CDK project for creating Bedrock Agent with Nova Pro",
+  "main": "dist/lib/bedrock-agent-stack.js",
+  "scripts": {
+    "build": "tsc",
+    "build:clean": "rm -rf dist && tsc",
+    "watch": "tsc -w",
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "test:build": "pnpm run build && jest",
+    "test:watch": "jest --watch",
+    "cdk": "pnpm exec cdk",
+    "synth": "pnpm exec cdk synth",
+    "bootstrap": "pnpm exec cdk bootstrap",
+    "deploy": "pnpm exec cdk deploy",
+    "destroy": "pnpm exec cdk destroy",
+    "diff": "pnpm exec cdk diff",
+    "ls": "pnpm exec cdk ls",
+    "deploy:dev": "pnpm exec cdk deploy --context environment=dev",
+    "deploy:staging": "pnpm exec cdk deploy --context environment=staging",
+    "deploy:dev:ci": "pnpm exec cdk deploy --context environment=dev --require-approval never",
+    "deploy:staging:ci": "pnpm exec cdk deploy --context environment=staging --require-approval never",
+    "destroy:dev": "pnpm exec cdk destroy --context environment=dev --force",
+    "destroy:staging": "pnpm exec cdk destroy --context environment=staging --force",
+    "synth:dev": "pnpm exec cdk synth --context environment=dev",
+    "synth:staging": "pnpm exec cdk synth --context environment=staging",
+    "bootstrap:dev": "pnpm exec cdk bootstrap --context environment=dev",
+    "bootstrap:staging": "pnpm exec cdk bootstrap --context environment=staging"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/node": "18.14.6",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "aws-cdk": "2.161.1",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.9.5"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.161.1",
+    "constructs": "^10.0.0"
+  }
+}
