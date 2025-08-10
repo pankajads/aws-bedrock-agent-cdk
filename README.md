@@ -47,13 +47,13 @@ aws bedrock-agent-runtime invoke-agent \
 
 ## What You Get
 
-✅ **Bedrock Agent** with Nova Pro model  
-✅ **Custom Actions** for calculations and time  
-✅ **Lambda Function** for action processing  
-✅ **S3 Bucket** for agent storage  
-✅ **Proper IAM** roles and permissions  
-✅ **Agent Alias** for live deployment  
-✅ **Multi-environment** support (dev/staging/prod)
+**Bedrock Agent** with Nova Pro model  
+**Custom Actions** for calculations and time  
+**Lambda Function** for action processing  
+**S3 Bucket** for agent storage  
+**Proper IAM** roles and permissions  
+**Agent Alias** for live deployment  
+**Multi-environment** support (dev/staging)
 
 ## Environment-Specific Commands
 
@@ -71,13 +71,6 @@ pnpm run deploy:staging       # Deploy to staging
 pnpm run synth:staging        # View staging template
 ```
 
-### Production
-```bash
-pnpm run bootstrap:prod    # Bootstrap prod environment
-pnpm run deploy:prod       # Deploy to prod
-pnpm run synth:prod        # View prod template
-```
-
 ## Common Commands
 
 ```bash
@@ -93,10 +86,3 @@ aws cloudformation describe-stacks --stack-name BedrockAgentStack-Dev
 # Clean up specific environment
 pnpm exec cdk destroy --context environment=dev
 ```
-
-## Need Help?
-
-- Check the full documentation in `bedrocj_agent_cdk.md`
-- View AWS Bedrock console for agent status
-- Check CloudWatch logs for debugging
-- Each environment has its own isolated resources
